@@ -19,15 +19,13 @@ RUN wget http://rpms.remirepo.net/enterprise/remi-release-7.rpm \
 && yum-config-manager --enable remi-php73 \
 && yum -y install php php-devel php-gd php-pdo php-soap php-xmlrpc php-zip php-mysql php-mcrypt php-xml php-mbstring
 
-RUN sed -i 's/AllowOverride None/AllowOverride All/g' /etc/httpd/conf/httpd.conf \
-&& chown root:apache /var/www/html \
-&& chmod g+s /var/www/html
-
-
-
-
 RUN rm -rf /etc/httpd/conf/httpd.conf
 ADD httpd.conf /etc/httpd/conf/httpd.conf
+
+RUN yum install php-cli php-zip wget unzip
+RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
 ##########################################################################################
 ### Fin de instalación de paqueteria
 ##########################################################################################

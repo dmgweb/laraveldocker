@@ -64,3 +64,18 @@
 2019-08-28 13:18:54,815 WARN received SIGTERM indicating exit request
 2019-08-28 13:18:54,815 INFO waiting for httpd to die
 2019-08-28 13:18:54,917 INFO stopped: httpd (exit status 0)
+2019-08-28 18:35:42,165 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2019-08-28 18:35:42,281 INFO RPC interface 'supervisor' initialized
+2019-08-28 18:35:42,282 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2019-08-28 18:35:42,282 INFO supervisord started with pid 1
+2019-08-28 18:35:43,285 INFO spawned: 'httpd' with pid 8
+2019-08-28 18:35:44,458 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2019-08-28 18:38:35,221 WARN received SIGTERM indicating exit request
+2019-08-28 18:38:35,222 INFO waiting for httpd to die
+2019-08-28 18:38:36,592 INFO stopped: httpd (exit status 0)
+2019-08-28 18:43:27,550 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2019-08-28 18:43:27,612 INFO RPC interface 'supervisor' initialized
+2019-08-28 18:43:27,612 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2019-08-28 18:43:27,612 INFO supervisord started with pid 1
+2019-08-28 18:43:28,615 INFO spawned: 'httpd' with pid 8
+2019-08-28 18:43:30,095 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)

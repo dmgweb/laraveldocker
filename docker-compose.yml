@@ -1,9 +1,8 @@
 version: '3'
 services:
   webserver:
-    container_name: laravelfront
+    container_name: laravel-front
     build:
-#      context: ./docker/
       context: .
       dockerfile: Dockerfile
     ports:
@@ -28,4 +27,4 @@ services:
       MYSQL_DATABASE: database
       MYSQL_USER: sesame
       MYSQL_PASSWORD: admin123
-    container_name: sesame-db
+    container_name: laravel-db

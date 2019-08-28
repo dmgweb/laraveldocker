@@ -4,9 +4,9 @@ La finalidad de este repo es tener listo un laravel junto con una bbdd funcionan
 
 ## Uso
 
-docker-compose up -d
+docker-compose up -d. 
+#
 docker exec laravel-front composer install
 docker exec laravel-front chown -R apache:apache storage/
 docker exec laravel-front cp .env.example .env
-docker exec laravel-front composer install
 docker exec laravel-front php artisan key:generate

@@ -1,0 +1,31 @@
+version: '3'
+services:
+  webserver:
+    container_name: laravelfront
+    build:
+#      context: ./docker/
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8029:80
+    volumes:
+      - .:/vhost
+#      - app_cache_volume:/sesame/var/cache
+#      - app_vendor_volume:/sesame/vendor
+    working_dir: /vhost
+    environment:
+      APP_SECRET: 7c570677b6270289dc9a2c927e2eb292
+      DATABASE_URL: mysql://user:admin123@db:3306/database
+      VIRTUAL_HOST: www.sesame.local
+  db:
+    image: mysql:5.7
+    ports:
+      - "3349:3306"
+    volumes:
+      - ./var/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: admin123
+      MYSQL_DATABASE: database
+      MYSQL_USER: sesame
+      MYSQL_PASSWORD: admin123
+    container_name: sesame-db

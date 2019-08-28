@@ -4,7 +4,7 @@ La finalidad de este repo es tener listo un laravel junto con una bbdd funcionan
 
 ## Uso
 
-docker-compose up -d. 
+docker-compose up -d
 
 docker exec laravel-front composer install
 

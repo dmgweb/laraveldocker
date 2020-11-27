@@ -133,3 +133,12 @@
 2020-11-27 17:28:06,915 WARN received SIGTERM indicating exit request
 2020-11-27 17:28:06,920 INFO waiting for httpd to die
 2020-11-27 17:28:06,995 INFO stopped: httpd (exit status 0)
+2020-11-27 17:36:10,613 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-11-27 17:36:10,619 INFO RPC interface 'supervisor' initialized
+2020-11-27 17:36:10,620 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2020-11-27 17:36:10,622 INFO supervisord started with pid 1
+2020-11-27 17:36:11,627 INFO spawned: 'httpd' with pid 9
+2020-11-27 17:36:12,700 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-11-27 17:38:21,504 WARN received SIGTERM indicating exit request
+2020-11-27 17:38:21,514 INFO waiting for httpd to die
+2020-11-27 17:38:21,624 INFO stopped: httpd (exit status 0)

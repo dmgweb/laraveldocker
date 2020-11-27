@@ -6,7 +6,7 @@ FROM centos:centos7
 
 RUN yum -y install curl wget unzip git vim \
 iproute python-setuptools hostname inotify-tools yum-utils which \
-epel-release openssh-server openssh-clients nano net-tools htop mysql-client
+epel-release openssh-server openssh-clients nano net-tools htop mysql
 
 RUN yum -y install python-setuptools \
 && mkdir -p /var/log/supervisor \

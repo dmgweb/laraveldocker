@@ -6,7 +6,7 @@ FROM centos:centos7
 
 RUN yum -y install curl wget unzip git vim \
 iproute python-setuptools hostname inotify-tools yum-utils which \
-epel-release openssh-server openssh-clients nano net-tools htop
+epel-release openssh-server openssh-clients nano net-tools htop mysql-client
 
 RUN yum -y install python-setuptools \
 && mkdir -p /var/log/supervisor \
@@ -17,10 +17,10 @@ RUN yum -y install httpd mod_ssl exim
 RUN wget http://rpms.remirepo.net/enterprise/remi-release-7.rpm \
 && rpm -Uvh remi-release-7.rpm \
 && yum-config-manager --enable remi-php73 \
-&& yum -y install php php-devel php-gd php-pdo php-soap php-xmlrpc php-zip php-mysql php-mcrypt php-xml php-mbstring
+&& yum -y install php php-devel php-gd php-pdo php-soap php-xmlrpc php-zip php-mysql php-mcrypt php-xml php-mbstring php-json php-redis
 
 RUN rm -rf /etc/httpd/conf/httpd.conf
-ADD httpd.conf /etc/httpd/conf/httpd.conf
+COPY dockerassets/httpd.conf /etc/httpd/conf/httpd.conf
 
 RUN yum install php-cli php-zip wget unzip
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
